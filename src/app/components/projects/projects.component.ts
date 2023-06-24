@@ -17,11 +17,11 @@ export class ProjectsComponent implements OnInit {
     },
     {
       name: "TechChat",
-      imageurl: "assets/iphone.png",
+      imageurl: "assets/Phone front.png",
     },
     {
       name: "Cypher Store",
-      imageurl: "assets/phone back.png",
+      imageurl: "assets/Phone front.png",
     },
   ];
   // Function to set the selected tab

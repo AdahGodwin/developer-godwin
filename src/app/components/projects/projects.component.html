@@ -3,7 +3,7 @@
         <div data-aos="fade-right" data-aos-duration="1500" class="title">My Work</div>
 
         <ul>
-            <li data-aos="fade-right" data-aos-duration="1500" class="list-item" *ngFor="let tab of tabs; let i = index" [class.active]="selectedTabIndex === i"
+            <li class="list-item" *ngFor="let tab of tabs; let i = index" [class.active]="selectedTabIndex === i"
                 (click)="selectTab(i)" #tabLi>
                 {{ tab.name }}
                 <div class="underline" [class.animate]="selectedTabIndex === i" #underline></div>
@@ -16,7 +16,42 @@
                 <span>{{tabs[selectedTabIndex].name}}</span>
                 <button mat-raised-button>View Project</button>
             </div>
-            <img data-aos="fade-left" data-aos-duration="1700" data-aos-anchor-placement="bottom-bottom" src={{tabs[selectedTabIndex].imageurl}} alt="">
+            <img data-aos="zoom-out-in" data-aos-duration="1700" data-aos-anchor-placement="bottom-bottom" src={{tabs[selectedTabIndex].imageurl}} alt="">
+        </div>
+        <div class="description" data-aos="fade-up" data-aos-duration="1700">
+            This is a NPM package that takes an SVG file and renders it as a inline SVG to the DOM and can also render
+            HTML files too. You can also pass data to it that render double curly braces. I created this to solve
+            problems with some frameworks and bundlers when using inline SVG files and to keep code clean an easier to
+            read.
+        </div>
+        <div class="links" data-aos="fade-up" data-aos-duration="1800">
+            <section>
+                <p>View Site</p>
+                <div class="view line"></div>
+            </section>
+            <section>
+                <p>Github</p>
+                <div class="git line"></div>
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<!-- mobile view -->
+<div class="mobile">
+    <div data-aos="fade-right" data-aos-duration="1500">
+        <p  class="title">My Work</p>
+    </div>
+    <div class="project-display" *ngFor="let project of tabs">
+        <div class="project">
+            <img data-aos="fade-up" data-aos-duration="1700" data-aos-anchor-placement="center-bottom"
+                [src]="project.imageurl" alt="project-image">
+            <div data-aos="fade-up" data-aos-duration="2000" class="project-title">
+                <span>{{tabs[selectedTabIndex].name}}</span>
+                <button mat-raised-button>View Project</button>
+            </div>
+            
         </div>
         <div class="description" data-aos="fade-up" data-aos-duration="1700">
             This is a NPM package that takes an SVG file and renders it as a inline SVG to the DOM and can also render

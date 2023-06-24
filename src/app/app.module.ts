@@ -7,9 +7,12 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatListModule } from "@angular/material/list";
+import {MatIconModule} from '@angular/material/icon';
 import { MatButtonModule } from "@angular/material/button";
 import { ContactComponent } from './components/contact/contact.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { IntroductionComponent } from './components/introduction/introduction.co
     AppRoutingModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

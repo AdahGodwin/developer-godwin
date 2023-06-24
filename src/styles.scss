@@ -2,8 +2,18 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #1A191D;
     margin: 0;
 }
 
+@font-face {
+    font-family: "Courier Prime";
+    src: url('assets/CourierPrime-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url('assets/SourceCodePro-VariableFont_wght.ttf');
+}

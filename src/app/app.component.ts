@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'developer-godwin';
+
+  isActive: boolean = false; 
+  
+  showMenu() {
+    this.isActive = !this.isActive;
+  }
 }

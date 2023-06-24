@@ -1,38 +1,59 @@
 .container {
-    width: 100%;
     color: #FFFFFF;
     font-family: 'Source Code Pro';
     font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
 
     .title {
         width: 424px;
-        height: 70px;
         font-weight: 700;
+
         font-size: 32px;
         line-height: 35px;
         text-align: center;
         letter-spacing: -0.025em;
+
+        @media (max-width: 479px) {
+            width: 90%;
+            font-size: 25px;
+        }
     }
 
     p {
+        text-align: center;
         font-weight: 600;
         font-size: 15px;
         line-height: 19px;
         margin: 35px;
 
     }
+
     .buttons {
         display: flex;
         gap: 30px;
+        @media (max-width: 349px) {
+            flex-direction: column;
+        } 
+
         button {
+            color: white;
             width: 153px;
             height: 45px;
-           
+            border-radius: 5px;
             background: #9B37FF;
         }
     }
-    
+
+    .socials {
+        a {
+        color: white;
+        }
+        margin-top: 40px;
+        fa-icon {
+            margin: 20px;
+        }
+    }
 }

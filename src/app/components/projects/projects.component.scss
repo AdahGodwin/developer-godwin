@@ -1,12 +1,18 @@
 .container {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-end;
   margin-top: 20%;
   margin-bottom: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
   gap: 30px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+
   .list {
     display: flex;
     flex-direction: column;
@@ -25,7 +31,6 @@
     }
 
     ul {
-
       padding: 0;
       list-style-type: none;
     }
@@ -57,71 +62,190 @@
     }
   }
 
-}
-
-.project-display {
-  display: flex;
-  flex-direction: column;
-
-  .project {
+  .project-display {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-bottom: 30px;
+    flex-direction: column;
 
-    .project-title {
+    .project {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: flex-end;
+      margin-bottom: 30px;
 
-      span {
-        font-family: 'Source Code Pro';
+      .project-title {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-family: 'Source Code Pro';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 40px;
+          color: #FFFFFF;
+        }
+
+        button {
+          color: white;
+          margin-top: 10px;
+          width: 153px;
+          height: 45px;
+          background: #9B37FF;
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 25px;
+      margin-right: 10%;
+
+      font-family: 'Source Code Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 19px;
+
+      color: #FFFFFF;
+
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      p {
+        font-family: 'Courier Prime';
         font-style: normal;
         font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 16px;
+        line-height: 18px;
+
         color: #FFFFFF;
       }
 
-      button {
-        margin-top: 10px;
-        width: 153px;
-        height: 45px;
-        background: #9B37FF;
+      .line {
+        width: 70px;
+        height: 5px;
+        background-color: #B171F2;
       }
     }
   }
 
-  .description {
-    width: 559px;
-    margin-bottom: 25px;
-    font-family: 'Source Code Pro';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 19px;
+}
 
-    color: #FFFFFF;
+
+
+// mobile view scss
+.mobile {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+
+  @media (min-width: 799px) {
+    display: none;
+  }
+
+  .title {
+    font-family: 'Courier Prime';
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    text-transform: capitalize;
+    line-height: 108px;
 
   }
 
-  .links {
+  .project-display {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    p {
-      font-family: 'Courier Prime';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      
-      color: #FFFFFF;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .project-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          font-family: 'Source Code Pro';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 80px;
+          color: #FFFFFF;
+        }
+
+        button {
+          margin-top: 10px;
+          width: 153px;
+          height: 45px;
+          background: #9B37FF;
+          color: white;
+        }
+      }
     }
 
-    .line {
-      width: 70px;
-      height: 5px;
-      background-color: #B171F2;
+    .description {
+      margin-bottom: 25px;
+      font-family: 'Source Code Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 19px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-left: 15%;
+      margin-right: 15%;
+
+      @media (max-width: 550px) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      @media (max-width: 350px) {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        p {
+          font-family: 'Courier Prime';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18px;
+
+          color: #FFFFFF;
+        }
+
+        .line {
+          position: absolute;
+          bottom: 5px;
+          width: 70px;
+          height: 5px;
+          background-color: #B171F2;
+        }
+      }
+
     }
   }
 }
