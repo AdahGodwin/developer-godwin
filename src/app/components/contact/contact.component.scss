@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        width: 424px;
+        height: 70px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: -0.025em;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+        margin: 35px;
+
+    }
+    .buttons {
+        display: flex;
+        gap: 30px;
+        button {
+            width: 153px;
+            height: 45px;
+           
+            background: #9B37FF;
+        }
+    }
+    
+}

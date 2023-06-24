@@ -1,0 +1,43 @@
+.introduction {
+    text-align: center;
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+
+    .name {
+        line-height: 144px;
+        font-size: 128px;
+        /* identical to box height */
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @media screen and (max-width: 1000px) {
+            font-size: 55px;
+        }
+        @media screen and (max-width: 650px) {
+            font-size: 55px;
+        }
+        @media screen and (max-width: 440px) {
+            font-size: 35px;
+        }
+        @media screen and (max-width: 300px) {
+            font-size: 25px;
+        }
+
+    }
+
+    .tagline {
+        font-size: 24px;
+        color: #65D9ED;
+        margin: 25px;
+
+    }
+
+    .description {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
+}

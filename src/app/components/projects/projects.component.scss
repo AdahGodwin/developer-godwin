@@ -1,0 +1,127 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 20%;
+  margin-bottom: 200px;
+  gap: 30px;
+  .list {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+
+    .title {
+
+      font-family: 'Courier Prime';
+
+      font-style: normal;
+      font-weight: 700;
+      font-size: 96px;
+      text-transform: capitalize;
+      line-height: 108px;
+      width: 264px;
+    }
+
+    ul {
+
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .list-item {
+      margin-top: 50px;
+      font-family: 'Source Code Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      color: white;
+    }
+
+    .list-item.active {
+      color: #B171F2;
+    }
+
+    .underline {
+      margin-top: 5px;
+      height: 5px;
+      background-color: #B171F2;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+      width: 60%;
+    }
+
+    .underline.animate {
+      transform: scaleX(1);
+    }
+  }
+
+}
+
+.project-display {
+  display: flex;
+  flex-direction: column;
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 30px;
+
+    .project-title {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-family: 'Source Code Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: #FFFFFF;
+      }
+
+      button {
+        margin-top: 10px;
+        width: 153px;
+        height: 45px;
+        background: #9B37FF;
+      }
+    }
+  }
+
+  .description {
+    width: 559px;
+    margin-bottom: 25px;
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    p {
+      font-family: 'Courier Prime';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      
+      color: #FFFFFF;
+    }
+
+    .line {
+      width: 70px;
+      height: 5px;
+      background-color: #B171F2;
+    }
+  }
+}
