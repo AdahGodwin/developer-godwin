@@ -1,0 +1,19 @@
+#hero-backup {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: clamp(0px, 95vw, 580px);
+    outline: none;
+    z-index: 0;
+    background-color: #1A191D;
+    border-radius: 5px;
+}
+canvas {
+    z-index: 1;
+}

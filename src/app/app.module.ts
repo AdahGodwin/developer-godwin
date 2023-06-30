@@ -12,7 +12,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { ContactComponent } from './components/contact/contact.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { ModelObjectComponent } from './components/model-object/model-object.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProjectsComponent,
     ContactComponent,
     IntroductionComponent,
+    ModelObjectComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
-import { faWhatsapp, faLinkedinIn, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faLinkedinIn,faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact',

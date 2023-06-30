@@ -75,12 +75,13 @@
       .project-title {
         display: flex;
         flex-direction: column;
-
+        width: 50%;
         span {
           font-family: 'Source Code Pro';
           font-style: normal;
           font-weight: 700;
           font-size: 32px;
+          
           line-height: 40px;
           color: #FFFFFF;
         }

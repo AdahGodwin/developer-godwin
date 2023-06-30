@@ -15,7 +15,6 @@
 			aria-haspopup='true'
 			aria-controls='primary-navigation'
 		>
-			<span class='sr-only'>Open menu</span>
 			<span class='line top' [attr.data-active]="isActive"></span>
 			<span class='line mid' [attr.data-active]="isActive"></span>
 			<span class='line bottom' [attr.data-active]="isActive"></span>
@@ -37,13 +36,13 @@
     </li>
   </ul>
 </div>
-
+<app-model-object></app-model-object>
 
 <div (click)="isActive == true?showMenu() :null" class="body-container">
 
-  <app-introduction></app-introduction>
+  <!-- <app-introduction></app-introduction>
   <app-expertise-section id="expertise"></app-expertise-section>
   
   <app-projects id="projects"></app-projects>
-  <app-contact id="contact"></app-contact>
+  <app-contact id="contact"></app-contact> -->
 </div>

@@ -1,9 +1,31 @@
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import * as Aos from 'aos';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  // animations: [
+  //   trigger('filterAnimation', [
+  //     transition(':enter, * => 0, * => -1', []),
+  //     transition(':increment', [
+  //       query(':enter', [
+  //         style({ opacity: 0, width: 0 }),
+  //         stagger(50, [
+  //           animate('300ms ease-out', style({ opacity: 1, width: '*' })),
+  //         ]),
+  //       ], { optional: true })
+  //     ]),
+  //     transition(':decrement', [
+  //       query(':leave', [
+  //         stagger(50, [
+  //           animate('300ms ease-out', style({ opacity: 0, width: 0 })),
+  //         ]),
+  //       ])
+  //     ]),
+  //   ])
+  // ]
 })
 
 export class ProjectsComponent implements OnInit {
