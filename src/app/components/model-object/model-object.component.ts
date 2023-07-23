@@ -1,10 +1,11 @@
-import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 import * as THREE from "three";
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
-import { Observable, Subscription, fromEvent } from 'rxjs';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-model-object',
@@ -14,9 +15,7 @@ import { Observable, Subscription, fromEvent } from 'rxjs';
 export class ModelObjectComponent {
   @ViewChild('canvas') private canvasRef!: ElementRef;
 
-  //* Stage Properties
-
-  @Input() public fieldOfView: number = 3;
+  @Input() public fieldOfView: number = 5;
 
   @Input('nearClipping') public nearClippingPane: number = 1;
 
@@ -52,20 +51,44 @@ export class ModelObjectComponent {
   private renderer!: THREE.WebGLRenderer;
 
   private scene!: THREE.Scene;
-
   /**
    *Animate the model
    *
    * @private
    * @memberof ModelComponent
    */
+  routing: boolean = false;
+
+
+
   private animateModel() {
     if (this.model) {
-     var modelScreen = this.model.children[0].children[0].children[1];
-    //  const { x, y } = this.getScreenPosition(this.model);
-    //   this.updateAttachedDivPosition(x, y); 
-     if (modelScreen.rotation.x > 3.1)
-      modelScreen.rotation.x -= 0.005;
+
+      var modelScreen = this.model.children[0].children[0].children[1];
+      if (this.model.position.x < 0) {
+        this.model.position.x += 0.5;
+        this.model.rotation.z += 0.0785;
+      }
+
+      if (modelScreen.rotation.x > 3.1 && this.model.position.x == 0) {
+        modelScreen.rotation.x -= 0.02;
+
+      }
+      if (modelScreen.rotation.x <= 3.1 && this.routing == false) {
+        this.routing = true;
+      }
+      if(this.routing && this.camera.fov > 1.2) {
+        this.camera.fov -= 0.05;
+        this.camera.updateProjectionMatrix();
+      }
+    }
+    if (this.camera.fov <=1.2 ) {
+
+      setTimeout(()=> {
+          this.router.navigate(['/portfolio']);
+
+      },100);
+
     }
   }
 
@@ -83,7 +106,7 @@ export class ModelObjectComponent {
     document.body.appendChild(renderer.domElement);
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.autoRotate = false;
-    this.controls.enableZoom = true;
+    this.controls.enableZoom = false;
     this.controls.enablePan = false;
     this.controls.update();
   };
@@ -97,18 +120,23 @@ export class ModelObjectComponent {
   private createScene() {
     //* Scene
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0xffff)
+    this.scene.background = new THREE.Color(0x999999)
     this.loaderGLTF.load('assets/laptop.glb', (gltf: GLTF) => {
       this.model = gltf.scene.children[0];
       this.model.children[0].children[0].children[1].rotation.x = 4.715;
-     var color: string = "#1A191D";
-      
-      console.log(this.model.children[0].children[0].children[1].children[0]);
+
+      console.log(this.model.position);
       var box = new THREE.Box3().setFromObject(this.model);
-      
-     box.getCenter(this.model.position); // this re-sets the mesh position 
-     this.model.position.y = -9; 
-     this.scene.add(this.model);
+
+      box.getCenter(this.model.position); // this re-sets the mesh position 
+      this.model.position.y = -9;
+      this.model.position.x = -40;
+      this.model.children[0].children[0].children[1].children[0].material.emissiveIntensity = -5;
+      this.model.children[0].children[0].children[1].children[0].material.color.set("black");
+      this.model.children[0].children[0].children[0].children[0].material.color.set(0x4b371c);
+
+
+      this.scene.add(this.model);
     });
     //*Camera
     let aspectRatio = this.getAspectRatio();
@@ -117,12 +145,10 @@ export class ModelObjectComponent {
       aspectRatio,
       this.nearClippingPane,
       this.farClippingPane
-    )
+    );
     this.camera.position.x = 0;
     this.camera.position.y = 60;
     this.camera.position.z = 500;
-    this.ambientLight = new THREE.AmbientLight(0x00000, 50);
-    this.scene.add(this.ambientLight);
     this.directionalLight = new THREE.DirectionalLight(0x2a2a2a, 0.4);
     this.directionalLight.position.set(0, 1, 0);
     this.directionalLight.castShadow = true;
@@ -166,36 +192,92 @@ export class ModelObjectComponent {
   }
   private attachedDiv!: HTMLElement;
 
-  ngOnInit(): void {
-    this.attachedDiv = document.querySelector('#hero-backup') as HTMLElement;
-    // ...
+  ngOnInit() {
+
+    Aos.init();
+    
   }
-  
-  // private getScreenPosition(object: THREE.Object3D): { x: number; y: number } {
-  //   const vector = new THREE.Vector3();
-  //   vector.setFromMatrixPosition(object.matrixWorld);
-  //   vector.project(this.camera);
-  //   const canvas = this.renderer.domElement;
-  //   const widthHalf = canvas.width / 2;
-  //   const heightHalf = canvas.height / 2;
-  //   const x = (vector.x * widthHalf) + widthHalf;
-  //   const y = -(vector.y * heightHalf) + heightHalf;
-  //   return { x, y };
-  // }
-  
-  private updateAttachedDivPosition(x: number, y: number): void {
-    this.attachedDiv.style.left = `${x}px`;
-    this.attachedDiv.style.top = `${y}px`;
+
+  setFov() {
+    if (window.innerWidth < 700) {
+      this.camera.fov = 8;
+    }
+    if (window.innerWidth < 450) {
+      this.camera.fov = 13;
+    }
   }
-  constructor() { }
-  // resize$!: Observable<Event>;
-  // resizeSub$!: Subscription;
+
+  private aspectRatio: number = 1; // Initialize with a default aspect ratio
+
+  constructor(private router: Router) {
+    // Listen to window resize event to handle responsiveness
+    window.addEventListener('resize', this.onWindowResize.bind(this));
+  }
+
+  /**
+   * Update camera aspect ratio and renderer size on window resize
+   */
+  private onWindowResize() {
+    this.aspectRatio = this.getAspectRatio();
+    this.setFov();
+    // Limit the maximum size of the canvas to prevent performance issues on large screens
+    const maxCanvasWidth = 1920; // You can adjust this value according to your needs
+    const maxCanvasHeight = 1080; // You can adjust this value according to your needs
+    const clientWidth = Math.min(window.innerWidth, maxCanvasWidth);
+    const clientHeight = Math.min(window.innerHeight, maxCanvasHeight);
+
+    this.camera.aspect = this.aspectRatio;
+    this.camera.updateProjectionMatrix();
+
+    this.renderer.setSize(clientWidth, clientHeight);
+    this.controls.update();
+  }
 
 
   ngAfterViewInit() {
     this.createScene();
     this.startRenderingLoop();
+    this.setFov();
     this.createControls();
+    this.onWindowResize(); // Call onWindowResize on component initialization
   }
+
+  ngOnDestroy(): void {
+    // Clean up the Three.js scene and resources here
+    this.disposeScene();
+    // Remove the window resize event listener
+    window.removeEventListener('resize', this.onWindowResize);
+  }
+
+  disposeScene(): void {
+    // Dispose of the WebGL renderer and remove its DOM element
+    this.renderer.dispose();
+    this.renderer.domElement.remove();
+
+    // Dispose of any other resources related to the scene, such as textures, materials, geometries, etc.
+    // ...
+
+    // Remove the laptop model from the scene
+    if (this.model) {
+      this.scene.remove(this.model);
+      this.model.traverse((object: THREE.Object3D) => {
+        if (object instanceof THREE.Mesh) {
+          object.geometry.dispose();
+          if (object.material instanceof THREE.Material) {
+            object.material.dispose();
+          } else if (Array.isArray(object.material)) {
+            object.material.forEach((material: THREE.Material) => material.dispose());
+          }
+        }
+      });
+    }
+
+    // Clean up other properties and set them to null or default values
+    this.model = null;
+    this.routing = false;
+    this.camera.fov = 5;
+    this.camera.updateProjectionMatrix();
+  }
+
 
 }

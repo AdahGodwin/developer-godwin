@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ExpertiseSectionComponent } from './components/expertise-section/expertise-section.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 import { MatListModule } from "@angular/material/list";
 import {MatIconModule} from '@angular/material/icon';
@@ -13,6 +14,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModelObjectComponent } from './components/model-object/model-object.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { FadeInAnimationDirective } from './directives/fade-in-animation.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { ModelObjectComponent } from './components/model-object/model-object.com
     ContactComponent,
     IntroductionComponent,
     ModelObjectComponent,
+    PortfolioComponent,
+    FadeInAnimationDirective,
+    
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,7 @@ import { ModelObjectComponent } from './components/model-object/model-object.com
     MatButtonModule,
     MatIconModule,
     FontAwesomeModule,
+    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

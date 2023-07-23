@@ -34,7 +34,7 @@
     .buttons {
         display: flex;
         gap: 30px;
-        @media (max-width: 349px) {
+        @media (max-width: 389px) {
             flex-direction: column;
         } 
 
@@ -54,6 +54,9 @@
         margin-top: 40px;
         fa-icon {
             margin: 20px;
+        }
+        fa-icon:hover {
+           color: #9B37FF;
         }
     }
 }
