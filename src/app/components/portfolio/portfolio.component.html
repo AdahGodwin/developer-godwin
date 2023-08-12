@@ -1,4 +1,5 @@
-  <div  id="home" class="header">
+<div class="header" [attr.data-color]="changeColor">
+  <div class="head">
     <section class="name">
       GodwinAdah._
     </section>
@@ -7,18 +8,13 @@
       <a href="#expertise">//expertise</a>
       <a href="#projects"> //projects</a>
       <a href="#contact"> //contact</a>
-     
+  
     </section>
-    <button
-              class='toggle'
-              (click)="showMenu()"
-              aria-haspopup='true'
-              aria-controls='primary-navigation'
-          >
-              <span class='line top' [attr.data-active]="isActive"></span>
-              <span class='line mid' [attr.data-active]="isActive"></span>
-              <span class='line bottom' [attr.data-active]="isActive"></span>
-          </button>
+    <button class='toggle' (click)="showMenu()" aria-haspopup='true' aria-controls='primary-navigation'>
+      <span class='line top' [attr.data-active]="isActive"></span>
+      <span class='line mid' [attr.data-active]="isActive"></span>
+      <span class='line bottom' [attr.data-active]="isActive"></span>
+    </button>
   </div>
   <div class="nav" [attr.data-visible]="isActive">
     <ul>
@@ -36,12 +32,14 @@
       </li>
     </ul>
   </div>
-  
-  <div (click)="isActive == true? showMenu() :null" class="body-container">
-  
-    <app-introduction></app-introduction>
-    <app-expertise-section id="expertise"></app-expertise-section>
-    
-    <app-projects id="projects"></app-projects>
-    <app-contact id="contact"></app-contact>
-  </div>
+</div>
+
+
+<div (click)="isActive == true? showMenu() :null" class="body-container">
+
+  <app-introduction id="home"></app-introduction>
+  <app-expertise-section id="expertise"></app-expertise-section>
+
+  <app-projects id="projects"></app-projects>
+  <app-contact id="contact"></app-contact>
+</div>
