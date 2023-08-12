@@ -1,4 +1,3 @@
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 
@@ -16,23 +15,22 @@ export class ProjectsComponent implements OnInit {
   tabs: any[] = [
     {
       name: "Expense planner",
-      imageurl: "assets/Phone front.png",
+      imageurl: "assets/epx.png",
     },
     {
-      name: "TechChat",
-      imageurl: "assets/Phone front.png",
+      name: "Tech Chat",
+      imageurl: "assets/techchat.png",
     },
     {
-      name: "Cypher Store",
-      imageurl: "assets/Phone front.png",
+      name: "Luxe Haven",
+      imageurl: "assets/luxhaven.png",
     },
   ];
   // Function to set the selected tab
   selectTab(index: number) {
     this.selectedTabIndex = index;
     const liElement = this.underline.nativeElement.parentElement;
-    this.underline.nativeElement.style.width = `${liElement.offsetWidth}px`;
-  }
+    }
   ngOnInit(): void {
     Aos.init();
   }

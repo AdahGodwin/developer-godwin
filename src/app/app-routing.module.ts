@@ -4,9 +4,9 @@ import { ModelObjectComponent } from './components/model-object/model-object.com
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 const routes: Routes = [
-  {path: "home", component: ModelObjectComponent},
-  {path: "portfolio", component: PortfolioComponent},
-
+  // {path: "home", component: ModelObjectComponent},
+  // {path: "portfolio", component: PortfolioComponent},
+  // {path: "", redirectTo: "home", pathMatch: "full"},
 ];
 
 @NgModule({
