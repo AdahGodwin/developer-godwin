@@ -18,6 +18,8 @@ import { PortfolioComponent } from './components/home-page/portfolio/portfolio.c
 import { FadeInAnimationDirective } from './directives/fade-in-animation.directive';
 import { ProjectDisplayComponent } from './components/project-page/project-display/project-display.component';
 import { ProjectTitleComponent } from './components/project-page/project-title/project-title.component';
+import { ProjectImagesComponent } from './components/project-page/project-images/project-images.component';
+import { ProjectFinaleComponent } from './components/project-page/project-finale/project-finale.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ProjectTitleComponent } from './components/project-page/project-title/p
     FadeInAnimationDirective,
     ProjectDisplayComponent,
     ProjectTitleComponent,
+    ProjectImagesComponent,
+    ProjectFinaleComponent,
     
   ],
   imports: [

@@ -1,0 +1,122 @@
+.container {
+    .cover-image {
+        height: 566px;
+        background-color: white;
+        margin-bottom: 6px;
+    }
+
+    .short-intro {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 117px 94px 144px 50px;
+
+        .app-name {
+            margin-bottom: 20px;
+            color: #3B3A3E;
+            font-family: Courier Prime;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .short-description {
+            color: #3B3A3E;
+            font-family: Courier Prime;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .landscape-image {
+        height: 482px;
+        background-color: aqua;
+    }
+
+    .challenges {
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        
+        padding: 151px 15% 110px 15%;
+        @media (max-width: 1600px) {
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+        @media (max-width: 1200px) {
+            padding-left: 10%;
+            padding-right: 10%;
+            justify-content: center;
+            gap: 10%;
+        
+        }
+        .title {
+            color: #3B3A3E;
+            font-family: Courier Prime;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            
+        }
+
+        .desc {
+            max-width: 444px;
+            color: #3B3A3E;
+            font-family: Open Sans;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+         
+        }
+    }
+    .carousel {
+        height: 449px;
+        background: #C8CEFE;
+    }
+    .ending-texts {
+    display: flex;
+        background-color: white;
+        justify-content: space-between;
+        
+        padding: 151px 15% 110px 15%;
+        @media (max-width: 1600px) {
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+        @media (max-width: 1200px) {
+            padding-left: 10%;
+            padding-right: 10%;
+            justify-content: center;
+            gap: 10%;
+        
+        }
+        .title {
+            max-width: 170px;
+            color: #3B3A3E;
+            font-family: Courier Prime;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            
+        }
+
+        .desc {
+            max-width: 444px;
+            color: #3B3A3E;
+            font-family: Open Sans;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+         section {
+            margin-bottom: 36px;
+         }
+        }       
+    }
+}

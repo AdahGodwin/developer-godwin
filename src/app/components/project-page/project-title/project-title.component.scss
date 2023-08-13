@@ -1,11 +1,9 @@
 .main {
     display: flex;
     flex-direction: column;
-    margin: 10%;
     color: #FFF;
-
-    line-height: normal;
-
+    margin-bottom: 30px;
+    
     .open-project {
         display: flex;
         justify-content: start;
@@ -25,7 +23,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
 
     .name {
@@ -43,10 +41,9 @@
         font-style: normal;
         font-weight: 700;
         margin-right: 68px;
-        width: 444px;
+        max-width: 444px;
         padding-bottom: 53px;
     }
-
 
     .project-info {
         display: flex;
@@ -54,18 +51,18 @@
         margin-bottom: 40px;
 
         .line {
-            width: 105.5px;
+            max-width: 105.5px;
             height: 1px;
             background-color: #65D9ED;
             margin-bottom: 22.5px;
         }
 
         .section-1 {
-            height: 27px;
             font-family: Source Code Pro;
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .section-2 {
