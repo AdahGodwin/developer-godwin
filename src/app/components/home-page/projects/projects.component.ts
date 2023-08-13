@@ -29,7 +29,6 @@ export class ProjectsComponent implements OnInit {
   // Function to set the selected tab
   selectTab(index: number) {
     this.selectedTabIndex = index;
-    const liElement = this.underline.nativeElement.parentElement;
     }
   ngOnInit(): void {
     Aos.init();

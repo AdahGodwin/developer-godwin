@@ -12,6 +12,7 @@
   }
 
   .list {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     color: #FFFFFF;
@@ -46,18 +47,7 @@
       color: #B171F2;
     }
 
-    .underline {
-      margin-top: 5px;
-      height: 5px;
-      background-color: #B171F2;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
-      width: 60%;
-    }
-
-    .underline.animate {
-      transform: scaleX(1);
-    }
+    
   }
 
   .project-display {
@@ -124,7 +114,7 @@
       }
 
       .line {
-        width: 70px;
+        // width: 70px;
         height: 5px;
         background-color: #B171F2;
       }
