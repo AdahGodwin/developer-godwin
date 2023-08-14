@@ -23,4 +23,5 @@ export class PortfolioComponent {
       this.changeColor = false; // Reset to transparent
     }
   }
+  
 }

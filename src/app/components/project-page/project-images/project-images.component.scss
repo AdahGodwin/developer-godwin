@@ -15,7 +15,7 @@
             margin-bottom: 20px;
             color: #3B3A3E;
             font-family: Courier Prime;
-            font-size: 20px;
+            font-size: 23px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -28,6 +28,10 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+            @media (max-width: 500px) {
+                font-size: 20px;
+                margin: 5px;
+            }
         }
     }
 
@@ -40,19 +44,30 @@
         display: flex;
         background-color: white;
         justify-content: space-between;
-        
+
         padding: 151px 15% 110px 15%;
+
         @media (max-width: 1600px) {
             padding-left: 5%;
             padding-right: 5%;
-            }
+        }
+
         @media (max-width: 1200px) {
             padding-left: 10%;
             padding-right: 10%;
             justify-content: center;
             gap: 10%;
+
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
         
         }
+
         .title {
             color: #3B3A3E;
             font-family: Courier Prime;
@@ -60,7 +75,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            
+
         }
 
         .desc {
@@ -71,39 +86,51 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-         
+
         }
     }
+
     .carousel {
         height: 449px;
         background: #C8CEFE;
     }
+
     .ending-texts {
-    display: flex;
+        display: flex;
         background-color: white;
         justify-content: space-between;
-        
+
         padding: 151px 15% 110px 15%;
+
         @media (max-width: 1600px) {
             padding-left: 5%;
             padding-right: 5%;
-            }
+        }
+
         @media (max-width: 1200px) {
             padding-left: 10%;
             padding-right: 10%;
             justify-content: center;
             gap: 10%;
-        
+
         }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
         .title {
-            max-width: 170px;
+            max-width: 200px;
             color: #3B3A3E;
             font-family: Courier Prime;
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            
+
         }
 
         .desc {
@@ -114,9 +141,10 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-         section {
-            margin-bottom: 36px;
-         }
-        }       
+
+            section {
+                margin-bottom: 36px;
+            }
+        }
     }
 }

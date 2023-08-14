@@ -13,7 +13,7 @@
         <div class="project">
             <div data-aos="fade-up" data-aos-duration="1000" class="project-title">
                 <span>{{tabs[selectedTabIndex].name}}</span>
-                <button mat-raised-button>View Project</button>
+                <button mat-raised-button routerLink="/project">View Project</button>
             </div>
             <img height="350px" data-aos="fade-in" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
                 src={{tabs[selectedTabIndex].imageurl}} alt="">
@@ -53,7 +53,7 @@
                 [src]="project.imageurl" alt="project-image">
             <div class="project-title">
                 <span>{{project.name}}</span>
-                <button mat-raised-button>View Project</button>
+                <button mat-raised-button routerLink="/project">View Project</button>
             </div>
 
         </div>
