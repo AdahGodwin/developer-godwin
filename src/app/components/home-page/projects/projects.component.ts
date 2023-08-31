@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import * as Aos from 'aos';
+import { ProjectService } from 'src/app/services/project.service';
+import { Project } from 'src/app/shared/project';
 
 @Component({
   selector: 'app-projects',
@@ -10,27 +12,18 @@ import * as Aos from 'aos';
 
 export class ProjectsComponent implements OnInit {
   @ViewChild('underline') underline!: ElementRef;
-
+  constructor(private projectService: ProjectService) {}
   selectedTabIndex: number = 0; // Initially selecting the first tab
-  tabs: any[] = [
-    {
-      name: "Expense planner",
-      imageurl: "assets/epx.png",
-    },
-    {
-      name: "Tech Chat",
-      imageurl: "assets/techchat.png",
-    },
-    {
-      name: "Luxe Haven",
-      imageurl: "assets/luxhaven.png",
-    },
-  ];
+  projects: Project[] = [];
+
+  
   // Function to set the selected tab
   selectTab(index: number) {
     this.selectedTabIndex = index;
     }
   ngOnInit(): void {
     Aos.init();
+    this.projects = this.projectService.getProjects();
+   
   }
 }

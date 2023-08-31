@@ -1,34 +1,29 @@
 <div class="container">
     <div class="cover-image">
-        <img src="assets/epx.jpg" alt="">
+        <img [src]="coverImg" alt="">
     </div>
     <div class="short-intro">
-        <section class="app-name">Expense Planner</section>
+        <section class="app-name">{{name}}</section>
         <section class="short-description">
-            Track and manage your expenses on the go with our user-friendly app.
+          {{shortIntro}}
         </section>
     </div>
     <div class="landscape-image">
-        <div class="circle">
+        <div [style.background-color]="baseColor" class="circle">
         </div>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="phone">
-            <img src="assets/px1.jpg" alt="">
+            <img [src]="homeImg" alt="">
         </div>
     </div>
     <div class="challenges">
         <section data-aos="fade-up" data-aos-duration="1000" class="title">The Challenge</section>
         <section data-aos="fade-up" data-aos-duration="1000" class="desc">
-            One of the core challenges was creating an
-            intuitive and visually appealing user interface that would simplify expense categorization and budget
-            planning.
+            {{challenge}}
         </section>
     </div>
     <div class="carousel">
-        <div data-aos="fade-up" data-aos-duration="1000" class="phone">
-            <img src="assets/px1.jpg" alt="">
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1000" class="phone">
-            <img src="assets/px1.jpg" alt="">
+        <div *ngFor="let img of carouselImgs" data-aos="fade-up" data-aos-duration="1000" class="phone">
+            <img [src]="img" alt="image">
         </div>
     </div>
     <div class="ending-texts">
@@ -37,12 +32,10 @@
         </section>
         <div data-aos="fade-up" data-aos-duration="1000" class="desc">
             <section>
-                As a key contributor, I was responsible for developing the entire frontend using Flutter and
-                implementing the backend APIs, ensuring a smooth and responsive user experience.
+                {{scope}}
             </section>
             <section>
-                The design was kept minimalist to ensure that users can quickly and easily access and understand their
-                financial information, allowing them to make informed decisions.
+                {{designRationale}}
             </section>
         </div>
     </div>

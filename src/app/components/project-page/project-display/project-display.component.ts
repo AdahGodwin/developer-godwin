@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from 'src/app/services/project.service';
+import { Project } from 'src/app/shared/project';
 
 @Component({
   selector: 'app-project-display',
@@ -7,10 +9,13 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./project-display.component.scss']
 })
 export class ProjectDisplayComponent {
-  constructor(private viewportScroller: ViewportScroller) {}
-  
+  constructor(private route: ActivatedRoute, private projectService: ProjectService) {}
+   project!: Project;
+  projectId!: string;
   ngOnInit(): void {
-    // this.viewportScroller.scrollToPosition([0, 0]);
+   this.projectId = this.route.snapshot.params["id"];
+  console.log(this.projectId);
       
-  }
+   this.project = this.project = this.projectService.getProject(this.projectId);
+    }
 }

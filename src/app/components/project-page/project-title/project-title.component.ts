@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import * as Aos from 'aos';
 
@@ -8,6 +8,12 @@ import * as Aos from 'aos';
   styleUrls: ['./project-title.component.scss']
 })
 export class ProjectTitleComponent {
+  @Input() name: string = "";
+  @Input() description: string = "";
+  @Input()  type: string = "";
+  @Input() client: string = "";
+  @Input() language: string = "";
+  
   faArrow = faArrowRightLong;
   ngOnInit(): void {
     Aos.init();

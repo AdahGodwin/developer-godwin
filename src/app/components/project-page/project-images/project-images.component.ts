@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import * as Aos from 'aos';
 @Component({
   selector: 'app-project-images',
@@ -6,6 +6,15 @@ import * as Aos from 'aos';
   styleUrls: ['./project-images.component.scss']
 })
 export class ProjectImagesComponent {
+  @Input() coverImg: string = "";
+  @Input() homeImg: string = "";
+  @Input() carouselImgs: string[] = [];
+  @Input() shortIntro: string = "";
+  @Input() challenge: string = "";
+  @Input() name: string = "";
+  @Input() scope: string = "";
+  @Input() designRationale: string = "";
+  @Input() baseColor: string = "";
   ngOnInit(): void {
     Aos.init();
   }
