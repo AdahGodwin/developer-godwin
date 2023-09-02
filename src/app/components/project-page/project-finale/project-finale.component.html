@@ -42,11 +42,13 @@
     <div class="next">
         <section class="buttons">
             <span>Next Project</span>
-            <fa-icon class="icon" [icon]="faArrowLeft" size="2xl"></fa-icon>
-            <fa-icon class="icon" [icon]="faArrowRight" size="2xl"></fa-icon>
+            <fa-icon style="color: #cccccc;" *ngIf="previousProject.id == ''" class="icon" [icon]="faArrowLeft" size="2xl"></fa-icon>            
+            <fa-icon *ngIf="previousProject.id != ''" [routerLink]="['/project', previousProject.id]" class="icon" [icon]="faArrowLeft" size="2xl"></fa-icon>
+            <fa-icon *ngIf="nextProject.id != ''" [routerLink]="['/project', nextProject.id]" class="icon" [icon]="faArrowRight" size="2xl"></fa-icon>
+            <fa-icon style="color: #cccccc;" *ngIf="nextProject.id == ''" class="icon" [icon]="faArrowRight" size="2xl"></fa-icon>
         </section>
         <section class="project-name">
-            Project Name
+            {{nextProject.name}}
         </section>
     </div>
 </div>

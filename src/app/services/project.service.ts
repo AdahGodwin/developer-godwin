@@ -42,7 +42,7 @@ export class ProjectService {
       "shortIntro": "Stay connected with your friends and colleagues through instant messaging.",
       "challenge": "Implementing real-time updates while maintaining message consistency.",
       "homeImage": "assets/techchat/tech2.png",
-      "landscapeImages": ["assets/techchat/tech1.png", "tech3.png"],
+      "landscapeImages": ["assets/techchat/tech1.png", "assets/techchat/tech3.png"],
       "scopeAndContribution": "Led frontend development using React and integrated with the Node.js backend.",
       "DesignRationale": "Opted for a clean and modern design to enhance user experience.",
       "featureImages": [
@@ -79,9 +79,36 @@ export class ProjectService {
   getProjects(): Project[] {
     return this.projects;
   }
- getProject(id: string): Project {
-  
-var project = this.projects.find((project: Project) => project.id == id);
-  return project!;
-} 
+  getProject(id: string): Project {
+
+    var project = this.projects.find((project: Project) => project.id == id);
+    return project!;
+  }
+
+  getNextProject(currentProjectId: string) {
+    var currentIndex: number = this.projects.findIndex((project) => project.id == currentProjectId);
+    if (currentIndex === this.projects.length - 1) {
+      return {
+        id: "",
+        name: "None",
+      }
+    }
+    return {
+      id: this.projects[currentIndex + 1].id,
+      name: this.projects[currentIndex + 1].name,
+    }
+  }
+  getPrevProject(currentProjectId: string) {
+    var currentIndex: number = this.projects.findIndex((project) => project.id == currentProjectId);
+    if (currentIndex === 0) {
+      return {
+        id: "",
+        name: "",
+      };
+    }
+    return {
+      id: this.projects[currentIndex - 1].id,
+      name: this.projects[currentIndex - 1].name,
+    }
+  }
 }

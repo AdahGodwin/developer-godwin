@@ -9,28 +9,28 @@
         </section>
     </div>
     <div class="landscape-image">
-        <div [style.background-color]="baseColor" class="circle">
+        <div data-aos="zoom-in" data-aos-duration="800" [style.background-color]="baseColor" class="circle">
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" class="phone">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="center-bottom" class="phone">
             <img [src]="homeImg" alt="">
         </div>
     </div>
     <div class="challenges">
-        <section data-aos="fade-up" data-aos-duration="1000" class="title">The Challenge</section>
-        <section data-aos="fade-up" data-aos-duration="1000" class="desc">
+        <section data-aos="fade-up" data-aos-duration="500" class="title">The Challenge</section>
+        <section data-aos="fade-up" data-aos-duration="500" class="desc">
             {{challenge}}
         </section>
     </div>
     <div class="carousel">
-        <div *ngFor="let img of carouselImgs" data-aos="fade-up" data-aos-duration="1000" class="phone">
+        <div *ngFor="let img of carouselImgs" data-aos="fade-up" data-aos-duration="500" class="phone">
             <img [src]="img" alt="image">
         </div>
     </div>
     <div class="ending-texts">
-        <section data-aos="fade-up" data-aos-duration="1000" class="title">
+        <section data-aos="fade-up" data-aos-duration="500" class="title">
             Scope, Contribution & Design Rationale
         </section>
-        <div data-aos="fade-up" data-aos-duration="1000" class="desc">
+        <div data-aos="fade-up" data-aos-duration="500" class="desc">
             <section>
                 {{scope}}
             </section>

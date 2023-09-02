@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { ExpertiseSectionComponent } from './components/home-page/expertise-section/expertise-section.component';
 import { ProjectsComponent } from './components/home-page/projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxTypedJsModule } from 'ngx-typed-js';
 
 import { MatListModule } from "@angular/material/list";
 import {MatIconModule} from '@angular/material/icon';
@@ -45,7 +44,6 @@ import { ProjectFinaleComponent } from './components/project-page/project-finale
     MatButtonModule,
     MatIconModule,
     FontAwesomeModule,
-    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

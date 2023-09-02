@@ -10,7 +10,7 @@
         padding-left: 10%;
         padding-right: 10%;
         justify-content: center;
-       
+
     }
 
     display: flex;
@@ -43,6 +43,7 @@
             @media (max-width: 1000px) {
                 height: 392px;
             }
+
             margin-bottom: 45px;
             max-width: 356px;
             height: 331px;
@@ -68,6 +69,7 @@
         background: #FFB14B;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         height: 392px;
+
         @media (max-width: 1000px) {
             max-width: 356px;
         }
@@ -121,11 +123,20 @@
         background: #FFF;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
         padding: 40px 19px 59px 19px;
+
         @media (max-width: 700px) {
             left: 20px;
-           }
+        }
+
         .icon {
             color: #9B37FF;
+            cursor: pointer;
+            border: none;
+        }
+
+        .icon:focus,
+        .icon:active {
+            outline: none;
         }
 
         span {
@@ -148,9 +159,8 @@
             font-family: Source Code Pro;
             font-size: 14px;
             font-weight: 700;
-
         }
-        
+
     }
 
 

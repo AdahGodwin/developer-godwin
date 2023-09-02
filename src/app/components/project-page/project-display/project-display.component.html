@@ -1,3 +1,26 @@
+<div class="header" [attr.data-color]="changeColor">
+  <div class="head">
+    <section class="name">
+      GodwinAdah._
+    </section>
+    <section class="links">
+      <a routerLink="/home">//homePage</a>
+      
+    </section>
+    <button class='toggle' (click)="showMenu()" aria-haspopup='true' aria-controls='primary-navigation'>
+      <span class='line top' [attr.data-active]="isActive"></span>
+      <span class='line mid' [attr.data-active]="isActive"></span>
+      <span class='line bottom' [attr.data-active]="isActive"></span>
+    </button>
+  </div>
+  <div class="nav" [attr.data-visible]="isActive">
+    <ul>
+      <li (click)="showMenu()">
+        <a routerLink="/home">//homePage</a>
+      </li>
+    </ul>
+  </div>
+</div>
 <div id="maincontent" class="container">
     <app-project-title [name]="project.name" [description]="project.description" [type]="project.type"
         [client]="project.client" [language]="project.language">

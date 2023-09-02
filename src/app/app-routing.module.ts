@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ModelObjectComponent } from './components/home-page/model-object/model-object.component';
+//import { ModelObjectComponent } from './components/home-page/model-object/model-object.component';
 import { PortfolioComponent } from './components/home-page/portfolio/portfolio.component';
 import { ProjectDisplayComponent } from './components/project-page/project-display/project-display.component';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: "enabled" })],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

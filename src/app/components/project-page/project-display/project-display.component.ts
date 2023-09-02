@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component,HostListener, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/shared/project';
@@ -9,13 +9,30 @@ import { Project } from 'src/app/shared/project';
   styleUrls: ['./project-display.component.scss']
 })
 export class ProjectDisplayComponent {
-  constructor(private route: ActivatedRoute, private projectService: ProjectService) {}
-   project!: Project;
-  projectId!: string;
+  constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
+  project!: Project;
   ngOnInit(): void {
-   this.projectId = this.route.snapshot.params["id"];
-  console.log(this.projectId);
-      
-   this.project = this.project = this.projectService.getProject(this.projectId);
+    this.route.params.subscribe(routeParams => {
+      this.project = this.projectService.getProject(routeParams["id"]);
+      console.log(this.project);
+    });
+
+  }
+  isActive: boolean = false; 
+  showMenu() {
+    this.isActive = !this.isActive;
+  }
+  private scrollThreshold = 0;
+  changeColor = false;
+
+  @HostListener('window:scroll', ['$event'])
+  handleScroll(event: Event): void {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > this.scrollThreshold) {
+      this.changeColor = true; // Change to the desired color
+    } else {
+      this.changeColor = false; // Reset to transparent
     }
+  }
 }
