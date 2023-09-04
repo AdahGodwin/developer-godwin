@@ -13,10 +13,13 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-
+        transition: all 400ms ease-out;
         .icon {
             color: #9B37FF;
         }
+    }
+    .open-project[show-button='false'] {
+        opacity: 0;
     }
 }
 
@@ -62,7 +65,7 @@
     }
     .project-info {
         display: flex;
-        gap: 32px;
+        gap: 25px;
         margin-bottom: 40px;
         @media (max-width: 900px) {
             // flex-direction: column;

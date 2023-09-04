@@ -23,13 +23,17 @@
 </div>
 <div id="maincontent" class="container">
     <app-project-title [name]="project.name" [description]="project.description" [type]="project.type"
-        [client]="project.client" [language]="project.language">
-    </app-project-title>
+        [client]="project.client" [language]="project.language"
+        (showpage)="showprojectPage($event)">
+        
+      </app-project-title>
 
-    <app-project-images [coverImg]="project.coverImage" [homeImg]="project.homeImage"
+    <div class="project-info" [attr.show-page]="show">
+      <app-project-images [coverImg]="project.coverImage" [homeImg]="project.homeImage"
         [carouselImgs]="project.landscapeImages" [name]="project.name" [designRationale]="project.DesignRationale"
         [scope]="project.scopeAndContribution" [shortIntro]="project.shortIntro" [challenge]="project.challenge"
         [baseColor]="project.baseColor">
     </app-project-images>
     <app-project-finale></app-project-finale>
+    </div>
 </div>

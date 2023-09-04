@@ -11,7 +11,15 @@ import { ProjectService } from 'src/app/services/project.service';
 export class ProjectFinaleComponent {
   faArrowRight = faArrowRightLong;
   faArrowLeft = faArrowLeftLong;
-
+  gridItems = [
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    // 'Item 5',
+    // Add more items as needed
+  ];
+  
   constructor(private route: ActivatedRoute, private projectService: ProjectService) {
 
   }

@@ -11,11 +11,16 @@ import { Project } from 'src/app/shared/project';
 export class ProjectDisplayComponent {
   constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
   project!: Project;
+  show: boolean = false;
+  
+  showprojectPage(value: boolean) {
+    this.show = value;
+    console.log(this.show);
+  }
   ngOnInit(): void {
     this.route.params.subscribe(routeParams => {
       this.project = this.projectService.getProject(routeParams["id"]);
-      console.log(this.project);
-    });
+      });
 
   }
   isActive: boolean = false; 

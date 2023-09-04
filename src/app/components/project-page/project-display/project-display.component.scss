@@ -7,7 +7,17 @@
     padding: 25px;
    } 
 }
+.project-info{
+    background-color: white;
+    transition: all 700ms ease-in; 
+    transform: scaleY(0);
+    max-height: 0;
+}
 
+.project-info[show-page='true'] {
+ transform:scaleY(1);
+ max-height: 100%;
+}
 .toggle {
     border: none;
     background-color: transparent;
@@ -74,7 +84,7 @@
 .header {
     width: 100%;
     transition: all 300ms ease;
-    position: fixed;
+    position: sticky;
     top: 0;
     background: #151C26;
     z-index: 20;

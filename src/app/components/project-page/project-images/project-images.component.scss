@@ -1,8 +1,6 @@
 .container {
-    background-color: white;
     .cover-image {
         max-height: 566px;
-        background-color: white;
         margin-bottom: 6px;
 
         img {
@@ -83,9 +81,7 @@
         .phone {
             z-index: 1;
             max-width: 280px;
-            max-height: 532px;
-            border-radius: 35px;
-            background-color: white;
+            // max-height: 532px;
             display: flex;
             position: relative;
             align-items: center;
@@ -93,12 +89,12 @@
            
             @media (max-width: 500px) {
                 max-width: 200px;
-                height: 380px;
+                // height: 380px;
 
             }
             @media (max-width: 330px) {
                 max-width: 150px;
-                max-height: 285px;
+                // max-height: 285px;
 
             }
 
@@ -106,11 +102,11 @@
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
-                border-radius: 35px;
-                filter: drop-shadow(3px 3px 9px grey);
+                border-radius: 25px;
+                box-shadow: 0 0 9px grey;
 
                 @media (max-width:500px) {
-                    border-radius: 25px;
+                    border-radius: 15px;
                 }
             }
         }
@@ -188,30 +184,23 @@
         
         .phone {
             max-width: 280px;
-            max-height: 532px;
-            border-radius: 25px;
-            background-color: white;
+            // max-height: 532px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: inset 0px 0px 0px -4px rgba(255, 255, 255, 0.1), 1px 1px 6px rgba(0, 0, 0, 0.05), 1px 1px 8px rgba(0, 0, 0, 0.07);
+            
 
             @media (max-width: 500px) {
                 max-width: 150px;
-                max-height: 285px;
-                border-radius: 15px;
+                // max-height: 285px;
             }
 
             img {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
-                border-radius: 25px;
-                filter: drop-shadow(0 0 5px grey);
-
-                @media (max-width:500px) {
-                    border-radius: 15px;
-                }
+                border-radius: 15px;
+                filter: drop-shadow(0 0 4px grey);
             }
         }
     }

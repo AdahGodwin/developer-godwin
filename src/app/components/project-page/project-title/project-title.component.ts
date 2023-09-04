@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import * as Aos from 'aos';
 
@@ -15,6 +15,14 @@ export class ProjectTitleComponent {
   @Input() language: string = "";
   
   faArrow = faArrowRightLong;
+
+  @Output() showpage = new EventEmitter<boolean>();
+  showButton = true;
+  showProject() {
+    this.showpage.emit(true);
+    this.showButton = false;
+  }
+
   ngOnInit(): void {
     Aos.init();
   }
