@@ -2,7 +2,7 @@
     font-family: 'Courier Prime';
     font-style: normal;
     font-weight: 700;
-    margin-top: 85px;
+    margin-top: 110px;
     margin-left: 20px;
     .expertise-title {
         text-align: center;
@@ -66,18 +66,16 @@
         .description-text {
             padding-left: 16px;
             display: flex;
-            
             .rod {
                 width: 1px;
-                height: 79.5px;
-
+               
                 border: 1px solid #3B3A3E;
             }
 
             .desc {
+
                 margin-left: 5px;
                 width: 201px;
-                height: 58px;
                 font-family: 'Source Code Pro';
                 font-weight: 600;
                 font-size: 15px;

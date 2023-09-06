@@ -1,4 +1,4 @@
-import { Component,HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/shared/project';
@@ -12,7 +12,7 @@ export class ProjectDisplayComponent {
   constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
   project!: Project;
   show: boolean = false;
-  
+  loading = true;
   showprojectPage(value: boolean) {
     this.show = value;
     console.log(this.show);
@@ -20,10 +20,13 @@ export class ProjectDisplayComponent {
   ngOnInit(): void {
     this.route.params.subscribe(routeParams => {
       this.project = this.projectService.getProject(routeParams["id"]);
-      });
+      setTimeout(() => {
+        this.loading = false;
+      }, 3000);
+    });
 
   }
-  isActive: boolean = false; 
+  isActive: boolean = false;
   showMenu() {
     this.isActive = !this.isActive;
   }

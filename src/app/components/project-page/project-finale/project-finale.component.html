@@ -1,10 +1,12 @@
+<div class="title">App Features</div>
+    
 <div class="main">
     <div class="grid-item" *ngFor="let item of gridItems; let i = index" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}">
         <section data-aos="fade-up" data-aos-duration="500" class="text">
-            Add new Transaction
+            {{item.feature}}
         </section>
         <div data-aos="fade-up" data-aos-duration="500" class="phone">
-            <img src="assets/epx/px1.jpg" alt="">
+            <img [src]="item.image" alt="">
         </div>
         
     </div>

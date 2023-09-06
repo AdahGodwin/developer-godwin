@@ -78,19 +78,20 @@
     flex-direction: column;
     justify-content: center;
     min-height: 88px;
-    
+
     .head {
         padding-top: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }   
+    }
 
     &[data-color='true'] {
         background: #1A191D;
         filter: drop-shadow(0px 0px 10px black);
-       
+
     }
+
     .name {
         padding-left: 20px;
         width: 20%;
@@ -103,19 +104,23 @@
         width: 60%;
         display: flex;
         gap: 5%;
+
         @media (max-width: 754px) {
             display: none;
         }
+
         a {
             color: #FFF;
             font-size: 16px;
             font-family: "Courier Prime";
             text-decoration: none;
+            cursor: pointer;
         }
     }
 
     button {
         margin-right: 20px;
+
         @media (min-width: 755px) {
             display: none;
         }

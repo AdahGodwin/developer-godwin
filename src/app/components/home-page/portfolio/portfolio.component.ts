@@ -1,4 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,11 +9,20 @@ import { Component, HostListener } from '@angular/core';
 })
 export class PortfolioComponent {
   isActive: boolean = false; 
-  showMenu() {
+  loading = true;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loading= false;
+    },3000);
+    Aos.init();
+  }
+  toggleMenu() {
     this.isActive = !this.isActive;
   }
   private scrollThreshold = 0;
   changeColor = false;
+  constructor(private viewportScroller: ViewportScroller) { }
 
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: Event): void {
@@ -23,5 +34,11 @@ export class PortfolioComponent {
       this.changeColor = false; // Reset to transparent
     }
   }
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
   
+    if (element) {
+      this.viewportScroller.scrollToAnchor(sectionId);
+    }
+  }
 }

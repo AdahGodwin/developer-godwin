@@ -21,6 +21,7 @@ export class ProjectTitleComponent {
   showProject() {
     this.showpage.emit(true);
     this.showButton = false;
+    Aos.init();
   }
 
   ngOnInit(): void {

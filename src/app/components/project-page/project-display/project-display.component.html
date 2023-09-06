@@ -1,4 +1,6 @@
-<div class="header" [attr.data-color]="changeColor">
+<app-loader *ngIf="loading"></app-loader>
+
+<div *ngIf="!loading" class="header" [attr.data-color]="changeColor">
   <div class="head">
     <section class="name">
       GodwinAdah._
@@ -21,7 +23,7 @@
     </ul>
   </div>
 </div>
-<div id="maincontent" class="container">
+<div *ngIf="!loading" id="maincontent" class="container">
     <app-project-title [name]="project.name" [description]="project.description" [type]="project.type"
         [client]="project.client" [language]="project.language"
         (showpage)="showprojectPage($event)">
@@ -34,6 +36,6 @@
         [scope]="project.scopeAndContribution" [shortIntro]="project.shortIntro" [challenge]="project.challenge"
         [baseColor]="project.baseColor">
     </app-project-images>
-    <app-project-finale></app-project-finale>
+    <app-project-finale [gridItems]="project.featureImages"></app-project-finale>
     </div>
 </div>

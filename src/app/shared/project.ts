@@ -15,5 +15,5 @@ export type Project = {
     landscapeImages: string[];
     scopeAndContribution: string; 
     DesignRationale: string;
-    featureImages: object[];
+    featureImages: any[];
 };

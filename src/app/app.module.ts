@@ -19,6 +19,8 @@ import { ProjectDisplayComponent } from './components/project-page/project-displ
 import { ProjectTitleComponent } from './components/project-page/project-title/project-title.component';
 import { ProjectImagesComponent } from './components/project-page/project-images/project-images.component';
 import { ProjectFinaleComponent } from './components/project-page/project-finale/project-finale.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { BlockLoaderComponent } from './components/block-loader/block-loader.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ProjectFinaleComponent } from './components/project-page/project-finale
     ProjectTitleComponent,
     ProjectImagesComponent,
     ProjectFinaleComponent,
+    LoaderComponent,
+    BlockLoaderComponent,
     
   ],
   imports: [
