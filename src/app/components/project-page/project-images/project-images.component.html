@@ -5,7 +5,7 @@
     <div class="short-intro">
         <section class="app-name">{{name}}</section>
         <section class="short-description">
-          {{shortIntro}}
+            {{shortIntro}}
         </section>
     </div>
     <div class="landscape-image">
@@ -21,10 +21,9 @@
             {{challenge}}
         </section>
     </div>
-    <div class="carousel">
-        <div *ngFor="let img of carouselImgs" data-aos="fade-up" data-aos-duration="500" class="phone">
-            <img [src]="img" alt="image">
-        </div>
+    <div class="carousel" data-aos="fade-up" data-aos-duration="500">
+        <img [src]="imageposter" alt="image">
+
     </div>
     <div class="ending-texts">
         <section data-aos="fade-up" data-aos-duration="500" class="title">

@@ -19,8 +19,8 @@ export class ProjectService {
       "client": "Personal Project",
       "shortIntro": "Track and manage your expenses on the go with our user-friendly app.",
       "challenge": "The primary challenge in developing the Expense Planner was designing an intuitive user interface for expense categorization. Additionally, creating the logic for keeping track of the transactions and also implementing filtering options based on the day or month posed significant challenges.",
-      "homeImage": "assets/epx/px1.jpg",
-      "landscapeImages": ["assets/epx/px2.png", "assets/epx/px3.png"],
+      "homeImage": "assets/epx/epx10.png",
+      "landscapeImage": "assets/epx/epxland.png",
       "scopeAndContribution": "My scope and contribution for this project encompassed the development of the entire frontend using Flutter. I also implemented on-device storage capabilities to enable users to view their financial information without requiring an internet connection.",
       "DesignRationale": "For the design, I chose an interesting and engaging visual style to challenge my frontend development skills while maintaining a high level of usability and aesthetic appeal.",
       "featureImages": [
@@ -37,30 +37,30 @@ export class ProjectService {
         { "feature": "Teal Theme", "image": "assets/epx/px10.png" },
       ]
     },
-    {
-      "id": "chat-app",
-      "name": "Tech Chat",
-      "description": "The Chat App is a dynamic platform that facilitates real-time communication between users. It offers a seamless and responsive interface for individuals and groups to interact, and stay connected. With robust features and secure protocols, users can exchange messages in a fluid environment, enhancing their connectivity.",
-      "github": "https://github.com/AdahGodwin/Chat_app",
-      "projectImage": "assets/techchat/techchat.png",
-      "coverImage": "assets/techchat/techchatcover.png",
-      "baseColor": "#FFC0CB",
-      "type": "Mobile App",
-      "language": "Flutter and Dart",
-      "client": "Personal Project",
-      "shortIntro": "Stay connected with your friends and colleagues through instant messaging.",
-      "challenge": "The main challenge in developing the Tech Chat app was the implementation of real-time updates while ensuring message consistency throughout the application.",
-      "homeImage": "assets/techchat/tech2.png",
-      "landscapeImages": ["assets/techchat/tech1.png", "assets/techchat/tech3.png"],
-      "scopeAndContribution": "My scope and contribution to this project involved the complete development of the frontend using Flutter. I also integrated the app with Firebase backend services for data storage and real-time messaging functionality.",
-      "DesignRationale": "In terms of design, I opted for a clean and modern aesthetic to enhance the user experience by providing a clutter-free and visually appealing environment for communication.",
-      "featureImages": [
-        { "feature": "Real-time Messaging", "image":"assets/techchat/tech2.png" },
-        { "feature": "Chat History", "image": "assets/techchat/tech1.png" },
-        { "feature": "Chats with Unread Messages", "image": "assets/techchat/tech4.png" },
-        { "feature": "User List", "image": "assets/techchat/tech5.png" }
-      ]
-    },
+    // {
+    //   "id": "chat-app",
+    //   "name": "Tech Chat",
+    //   "description": "The Chat App is a dynamic platform that facilitates real-time communication between users. It offers a seamless and responsive interface for individuals and groups to interact, and stay connected. With robust features and secure protocols, users can exchange messages in a fluid environment, enhancing their connectivity.",
+    //   "github": "https://github.com/AdahGodwin/Chat_app",
+    //   "projectImage": "assets/techchat/techchat.png",
+    //   "coverImage": "assets/techchat/techchatcover.png",
+    //   "baseColor": "#FFC0CB",
+    //   "type": "Mobile App",
+    //   "language": "Flutter and Dart",
+    //   "client": "Personal Project",
+    //   "shortIntro": "Stay connected with your friends and colleagues through instant messaging.",
+    //   "challenge": "The main challenge in developing the Tech Chat app was the implementation of real-time updates while ensuring message consistency throughout the application.",
+    //   "homeImage": "assets/techchat/tech2.png",
+    //   "landscapeImages": ["assets/techchat/tech1.png", "assets/techchat/tech3.png"],
+    //   "scopeAndContribution": "My scope and contribution to this project involved the complete development of the frontend using Flutter. I also integrated the app with Firebase backend services for data storage and real-time messaging functionality.",
+    //   "DesignRationale": "In terms of design, I opted for a clean and modern aesthetic to enhance the user experience by providing a clutter-free and visually appealing environment for communication.",
+    //   "featureImages": [
+    //     { "feature": "Real-time Messaging", "image":"assets/techchat/tech2.png" },
+    //     { "feature": "Chat History", "image": "assets/techchat/tech1.png" },
+    //     { "feature": "Chats with Unread Messages", "image": "assets/techchat/tech4.png" },
+    //     { "feature": "User List", "image": "assets/techchat/tech5.png" }
+    //   ]
+    // },
     {
       "id": "e-commerce-app",
       "name": "Luxe Haven",
@@ -75,7 +75,7 @@ export class ProjectService {
       "shortIntro": "Shop for your favorite products from the comfort of your home.",
       "challenge": "One of the primary challenges in developing Luxe Haven was creating a UI with a bottom tab navigation structure to provide users with easy access to various sections of the app. Additionally, implementing user authentication and ensuring its security were significant challenges.",
       "homeImage": "assets/lux/lux2.png",
-      "landscapeImages": ["assets/lux/lux1.png", "assets/lux/lux3.png"],
+      "landscapeImage": "assets/lux/luxland.png",
       "scopeAndContribution": "My scope and contribution for this project encompassed the entire app development process using Flutter. I also integrated the app with Firebase backend services to enable secure user authentication and data management.",
       "DesignRationale": "In terms of design, I employed a visually appealing and user-friendly approach to showcase products effectively and provide a delightful shopping experience for users.",
       "featureImages": [

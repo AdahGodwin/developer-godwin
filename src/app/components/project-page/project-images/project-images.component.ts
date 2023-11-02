@@ -8,13 +8,14 @@ import * as Aos from 'aos';
 export class ProjectImagesComponent {
   @Input() coverImg: string = "";
   @Input() homeImg: string = "";
-  @Input() carouselImgs: string[] = [];
+  @Input() imageposter:string = "";
   @Input() shortIntro: string = "";
   @Input() challenge: string = "";
   @Input() name: string = "";
   @Input() scope: string = "";
   @Input() designRationale: string = "";
   @Input() baseColor: string = "";
+
   ngOnInit(): void {
     Aos.init();
   }

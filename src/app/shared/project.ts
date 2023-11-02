@@ -12,7 +12,7 @@ export type Project = {
     shortIntro: string;
     challenge: string;
     homeImage: string;
-    landscapeImages: string[];
+    landscapeImage: string;
     scopeAndContribution: string; 
     DesignRationale: string;
     featureImages: any[];

@@ -1,6 +1,6 @@
 <app-loader *ngIf="loading"></app-loader>
 
-<div *ngIf="!loading" class="header" [attr.data-color]="changeColor">
+<div class="header" [attr.data-color]="changeColor">
   <div class="head">
     <section class="name">
       GodwinAdah._
@@ -32,7 +32,7 @@
 
     <div class="project-info" [attr.show-page]="show">
       <app-project-images [coverImg]="project.coverImage" [homeImg]="project.homeImage"
-        [carouselImgs]="project.landscapeImages" [name]="project.name" [designRationale]="project.DesignRationale"
+        [imageposter]="project.landscapeImage" [name]="project.name" [designRationale]="project.DesignRationale"
         [scope]="project.scopeAndContribution" [shortIntro]="project.shortIntro" [challenge]="project.challenge"
         [baseColor]="project.baseColor">
     </app-project-images>

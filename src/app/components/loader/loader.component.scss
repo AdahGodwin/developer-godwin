@@ -1,11 +1,15 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    gap: 30px;
+  z-index: 500;
+  display: flex;
+  background-color: #1A191D;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 30px;
+  position: absolute;
 }
+
 .loader {
   width: 30px;
   height: 30px;
@@ -14,6 +18,7 @@
   animation: loader 2s infinite ease;
 
 }
+
 .text {
   text-align: center;
   color: white;
@@ -22,27 +27,29 @@
   font-family: 'Courier Prime';
   animation: text-loader 1s infinite ease-in;
 }
+
 @keyframes text-loader {
   0% {
     opacity: 0;
   }
-  
+
   25% {
     opacity: 0;
   }
-  
+
   50% {
     opacity: 1;
   }
-  
+
   75% {
     opacity: 1;
   }
-  
+
   100% {
     opacity: 0;
   }
 }
+
 .loader-inner {
   vertical-align: top;
   display: inline-block;
@@ -55,19 +62,19 @@
   0% {
     transform: rotate(0deg);
   }
-  
+
   25% {
     transform: rotate(180deg);
   }
-  
+
   50% {
     transform: rotate(180deg);
   }
-  
+
   75% {
     transform: rotate(360deg);
   }
-  
+
   100% {
     transform: rotate(360deg);
   }
@@ -77,19 +84,19 @@
   0% {
     height: 0%;
   }
-  
+
   25% {
     height: 0%;
   }
-  
+
   50% {
     height: 100%;
   }
-  
+
   75% {
     height: 100%;
   }
-  
+
   100% {
     height: 0%;
   }
