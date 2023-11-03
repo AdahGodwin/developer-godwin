@@ -13,16 +13,17 @@ export class ProjectTitleComponent {
   @Input()  type: string = "";
   @Input() client: string = "";
   @Input() language: string = "";
+  @Input() github: string = "";
   
   faArrow = faArrowRightLong;
 
-  @Output() showpage = new EventEmitter<boolean>();
-  showButton = true;
-  showProject() {
-    this.showpage.emit(true);
-    this.showButton = false;
-    Aos.init();
-  }
+  // @Output() showpage = new EventEmitter<boolean>();
+  // showButton = true;
+  // showProject() {
+  //   this.showpage.emit(true);
+  //   this.showButton = false;
+  //   Aos.init();
+  // }
 
   ngOnInit(): void {
     Aos.init();

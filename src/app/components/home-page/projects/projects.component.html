@@ -15,7 +15,7 @@
                 <span>{{projects[selectedTabIndex].name}}</span>
                 <button mat-raised-button [routerLink]="['/project', projects[selectedTabIndex].id]">View Project</button>
             </div>
-            <img height="350px" data-aos="fade-in" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+            <img height="350px" data-aos="fade-in" data-aos-duration="1000" data-aos-anchor-placement="center-bottom"
                 src={{projects[selectedTabIndex].projectImage}} alt="">
         </div>
         <div class="project-description" data-aos="fade-up" data-aos-duration="1000">
@@ -43,7 +43,7 @@
     </div>
     <div class="project-display" data-aos="fade-up" data-aos-duration="1000" *ngFor="let project of projects">
         <div class="project">
-            <img height="350px" data-aos="fade-in" data-aos-duration="1700" data-aos-anchor-placement="bottom-bottom"
+            <img height="350px" data-aos="fade-in" data-aos-duration="1700" data-aos-anchor-placement="center-bottom"
                 [src]="project.projectImage" alt="project-image">
             <div class="project-title">
                 <span>{{project.name}}</span>

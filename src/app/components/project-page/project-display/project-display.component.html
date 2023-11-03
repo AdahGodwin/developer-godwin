@@ -7,7 +7,6 @@
     </section>
     <section class="links">
       <a routerLink="/home">//homePage</a>
-      
     </section>
     <button class='toggle' (click)="showMenu()" aria-haspopup='true' aria-controls='primary-navigation'>
       <span class='line top' [attr.data-active]="isActive"></span>
@@ -26,11 +25,10 @@
 <div *ngIf="!loading" id="maincontent" class="container">
     <app-project-title [name]="project.name" [description]="project.description" [type]="project.type"
         [client]="project.client" [language]="project.language"
-        (showpage)="showprojectPage($event)">
-        
+        [github]="project.github">
       </app-project-title>
 
-    <div class="project-info" [attr.show-page]="show">
+    <div class="project-info">
       <app-project-images [coverImg]="project.coverImage" [homeImg]="project.homeImage"
         [imageposter]="project.landscapeImage" [name]="project.name" [designRationale]="project.DesignRationale"
         [scope]="project.scopeAndContribution" [shortIntro]="project.shortIntro" [challenge]="project.challenge"
@@ -38,4 +36,4 @@
     </app-project-images>
     <app-project-finale [gridItems]="project.featureImages"></app-project-finale>
     </div>
-</div>
+</div>!

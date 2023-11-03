@@ -9,18 +9,21 @@
         justify-content: flex-start;
         align-items: center;
         gap: 8px;
+        cursor: pointer;
         font-family: Source Code Pro;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         transition: all 400ms ease-out;
+        a {
+            color: white;
+            text-decoration: none;
+        }
         .icon {
             color: #9B37FF;
         }
     }
-    .open-project[show-button='false'] {
-        opacity: 0;
-    }
+  
 }
 
 .container {

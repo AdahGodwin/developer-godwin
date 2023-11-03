@@ -9,15 +9,8 @@
 }
 .project-info{
     background-color: white;
-    transition: all 700ms ease-in; 
-    transform: scaleY(0);
-    max-height: 0;
 }
 
-.project-info[show-page='true'] {
- transform:scaleY(1);
- max-height: 100%;
-}
 .toggle {
     border: none;
     background-color: transparent;
