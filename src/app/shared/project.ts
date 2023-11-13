@@ -4,6 +4,7 @@ export type Project = {
     description: string;
     github: string;
     projectImage: string;
+    mobileImage: string;
     coverImage: string;
     baseColor: string;
     type: string;

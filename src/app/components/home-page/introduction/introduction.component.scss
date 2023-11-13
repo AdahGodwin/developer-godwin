@@ -25,9 +25,9 @@
         position: absolute;
         z-index: -1;
         top: 0;
-        
+        max-height: 100vh;
         @media (max-width: 600px) {
-            height: 80vh;
+            max-height: 80vh;
         }
     }
 

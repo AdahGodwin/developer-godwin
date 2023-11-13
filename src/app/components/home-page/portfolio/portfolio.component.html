@@ -35,9 +35,9 @@
   </div>
 </div>
 
-<div data-aos="fade-in" data-aos-duration="1000"  *ngIf="!loading" (click)="isActive == true? toggleMenu() :null" class="body-container">
+<div data-aos="fade-in" data-aos-duration="1000" (click)="isActive == true? toggleMenu() :null" class="body-container">
   <app-introduction id="home"></app-introduction>
-  <app-expertise-section id="expertise"></app-expertise-section>
-  <app-projects id="projects"></app-projects>
-  <app-contact id="contact"></app-contact>
+  <app-expertise-section id="expertise" *ngIf="!loading"></app-expertise-section>
+  <app-projects id="projects" *ngIf="!loading"></app-projects>
+  <app-contact id="contact" *ngIf="!loading"></app-contact>
 </div>

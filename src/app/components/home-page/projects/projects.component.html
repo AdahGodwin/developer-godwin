@@ -44,7 +44,7 @@
     <div class="project-display" data-aos="fade-up" data-aos-duration="1000" *ngFor="let project of projects">
         <div class="project">
             <img height="350px" data-aos="fade-in" data-aos-duration="1700" data-aos-anchor-placement="center-bottom"
-                [src]="project.projectImage" alt="project-image">
+                [src]="project.mobileImage" alt="project-image">
             <div class="project-title">
                 <span>{{project.name}}</span>
                 <button mat-raised-button [routerLink]="['/project', project.id]">View Project</button>
