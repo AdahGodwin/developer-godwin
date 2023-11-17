@@ -20,14 +20,14 @@
     }
 
     .background-img {
-        object-fit: cover;
+        object-fit: fill;
         width: 100%;
         position: absolute;
         z-index: -1;
         top: 0;
-        max-height: 100vh;
+        height: 100vh;
         @media (max-width: 600px) {
-            max-height: 80vh;
+        height: 65vh;
         }
     }
 
